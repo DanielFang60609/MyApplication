@@ -91,6 +91,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         @Override
         public void onLocationChanged(Location location) {
+            mMap.clear();
             double currentLatitude = location.getLatitude();
             double currentLongitude = location.getLongitude();
             LatLng newLatLng = new LatLng(currentLatitude, currentLongitude);
